@@ -1,0 +1,37 @@
+MIJN STUDENTENZAAK 2026 – MOBIELE WEBAPP
+
+INHOUD
+- index.html: dashboard
+- manifest.webmanifest: installatie-instellingen
+- service-worker.js: offline cache
+- icon-192.png en icon-512.png: app-iconen
+
+INSTALLEREN / PUBLICEREN
+Deze PWA moet via HTTPS gehost worden om installatie en offline caching betrouwbaar te laten werken. Upload de volledige inhoud van deze map ongewijzigd naar een webhost. Open daarna de URL op de gsm.
+
+iPhone: Safari > Deel > Zet op beginscherm.
+Android: Chrome > menu > Toevoegen aan startscherm / App installeren.
+
+GEGEVENS
+De data wordt uitsluitend lokaal in de browser opgeslagen. Gebruik in Instellingen regelmatig 'Exporteer back-up'. Browserdata wissen kan de gegevens verwijderen.
+
+FUNCTIES
+- inkomsten en kosten toevoegen
+- beroepspercentage per kost
+- automatische aftrekbare kost
+- omzet, kosten en voorlopig resultaat
+- sociale-grenzenindicator
+- studentenjoburenteller
+- kosten per categorie
+- JSON-back-up/import
+- CSV-export
+
+LET OP
+Dit dashboard is een administratief hulpmiddel, geen fiscale aangifte. De ingebouwde grenzen zijn ingesteld op 2026.
+
+FOTOFUNCTIE EN OCR
+- In het kostenformulier kun je rechtstreeks de camera openen of een foto kiezen.
+- Datum, totaalbedrag en leverancier worden waar mogelijk automatisch voorgesteld.
+- OCR gebruikt Tesseract.js via internet. Zonder internet blijft foto-opslag en handmatige invoer werken, maar automatisch uitlezen mogelijk niet.
+- Controleer altijd de herkende gegevens. OCR kan bedragen, data of namen verkeerd lezen.
+- Bonfoto's worden gecomprimeerd en lokaal in de browser opgeslagen. Veel foto's kunnen de browseropslag vullen; exporteer daarom regelmatig een back-up.
