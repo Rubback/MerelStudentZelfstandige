@@ -42,4 +42,7 @@ function importData(e){let f=e.target.files[0];if(!f)return;let r=new FileReader
 function exportCSV(){let rows=[['Datum','Type','Leverancier/klant','Omschrijving','Categorie','Bedrag','Beroepspercentage','Aftrekbare kost','Bewijsstuk'],...data.entries.map(x=>[x.date,x.type,x.party,x.description,x.category,x.amount,x.percent,x.deductible||0,x.proof||''])];let csv=rows.map(r=>r.map(v=>'"'+String(v).replaceAll('"','""')+'"').join(';')).join('\n');download(`studentenzaak-${data.settings.year||2026}.csv`, '\ufeff'+csv,'text/csv')}
 function download(n,c,t){let a=document.createElement('a');a.href=URL.createObjectURL(new Blob([c],{type:t}));a.download=n;a.click();URL.revokeObjectURL(a.href)}function resetData(){if(confirm('Alle lokale gegevens wissen?')){data={entries:[],hours:0,settings:{year:2026}};save()}}function escapeHtml(s=''){return s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
 if('serviceWorker'in navigator)navigator.serviceWorker.register('./service-worker.js');render();
-</script></body></html>
+</script>
+<script src="category-defaults.js"></script>
+</body>
+</html>
